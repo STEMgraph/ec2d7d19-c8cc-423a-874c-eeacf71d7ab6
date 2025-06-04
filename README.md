@@ -1,51 +1,121 @@
 <!---
 {
-  "depends_on": [],
+  "id": "ec2d7d19-c8cc-423a-874c-eeacf71d7ab6",
+  "depends_on": ["2c7334b3-b07d-48d6-a562-79072d8e166e"],
   "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "first_used": "2025-06-04",
+  "keywords": ["SVG", "markup", "graphics", "vector graphics"]
 }
 --->
 
-# Learning Through Exercises
+# Introduction to SVG Pictures and Markup Editing
+
+> In this exercise you will learn how to create and edit SVG (Scalable Vector Graphics) files by directly writing SVG markup. Furthermore we will explore how to structure simple SVG files, understand their syntax, and preview the graphics you generate.
 
 ## Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+
+Scalable Vector Graphics (SVG) is an XML-based markup language for describing two-dimensional vector graphics. Unlike raster images such as JPEG or PNG, SVG images are resolution-independent, meaning they can be scaled to any size without loss of quality. This makes them ideal for web design, technical illustrations, and many forms of digital art.
+
+An SVG file consists of tags that describe shapes such as lines, circles, rectangles, polygons, and paths. It also allows embedding text and applying transformations and styling through CSS or inline attributes. Since SVG is plain text, it can be written and edited directly in any plain text editor.
+
+In this exercise, you will edit SVG files directly by modifying their markup. You will work directly on the file content, adding shapes and attributes by writing XML-style elements and previewing your results in a web browser. This approach helps you deeply understand the structure of SVG files and the meaning of each tag and attribute.
+
+After completing this exercise, you will be able to:
+
+* Understand basic SVG structure.
+* Create simple shapes with SVG elements.
+* Use attributes such as `stroke`, `fill`, and `transform`.
+* Modify and refine SVG files by editing the markup.
+* Preview your SVG creations in a web browser.
 
 ### Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
+
+* [W3C SVG Specification](https://www.w3.org/TR/SVG2/)
+* [MDN Web Docs on SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+* [A Beginner's Guide to SVG on YouTube](https://www.youtube.com/watch?v=HZv8YHYU3xE)
 
 ## Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
 
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+### Task 1: Create Your First SVG File
 
-## Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+1. Create a new SVG file and open it for editing. Name the file:
+
+   ```bash
+   simple_drawing.svg
+   ```
+2. Insert the following minimal SVG skeleton into the file:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+       <rect x="50" y="50" width="300" height="300" stroke="black" fill="none" stroke-width="3"/>
+   </svg>
+   ```
+3. Save the file.
+4. Open the file in any modern web browser to preview your rectangle.
+
+### Task 2: Add a Circle and a Line
+
+1. Open the file for editing again.
+2. Below the `<rect>` element, insert the following elements:
+
+   ```xml
+   <circle cx="200" cy="200" r="100" stroke="blue" fill="lightblue" stroke-width="2"/>
+   <line x1="50" y1="50" x2="350" y2="350" stroke="red" stroke-width="2"/>
+   ```
+3. Save and preview your updated SVG file.
+
+### Task 3: Apply Transformations
+
+1. Add a rotated rectangle inside the SVG:
+
+   ```xml
+   <rect x="150" y="150" width="100" height="100" stroke="green" fill="yellow" stroke-width="2" transform="rotate(45 200 200)"/>
+   ```
+2. Notice how the rectangle rotates around its center point `(200, 200)`.
+3. Save and refresh your browser to see the transformation effect.
+
+### Task 4: Add Text and Group Elements
+
+1. Insert a group (`<g>`) to organize your elements:
+
+   ```xml
+   <g>
+       <text x="200" y="390" font-size="24" text-anchor="middle" fill="black">My First SVG</text>
+   </g>
+   ```
+2. Save your file and preview the added text label.
+
+### Task 5: Create a Polygon Shape
+
+1. Below your existing shapes, insert a polygon element:
+
+   ```xml
+   <polygon points="100,100 300,100 200,300" stroke="purple" fill="violet" stroke-width="2"/>
+   ```
+2. This creates a triangle by connecting the given coordinate points.
+3. Save and refresh your browser to view the polygon.
+
+### Task 6: Add an Ellipse
+
+1. Insert an ellipse element:
+
+   ```xml
+   <ellipse cx="200" cy="200" rx="80" ry="50" stroke="brown" fill="orange" stroke-width="2"/>
+   ```
+2. This creates an ellipse centered at `(200, 200)` with horizontal and vertical radii.
+3. Save and preview the result.
+
+### Task 7: Draw a Polyline
+
+1. Insert a polyline element:
+
+   ```xml
+   <polyline points="50,350 150,300 250,350 350,300" stroke="darkgreen" fill="none" stroke-width="3"/>
+   ```
+2. This creates a zig-zag line connecting the listed points.
+3. Save and preview your updated SVG file.
 
 ## Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
 
+By directly editing SVG markup, you gain full control over how your vector graphics are structured and displayed. This approach teaches you how each SVG element and attribute contributes to the final visual result. Start by experimenting with simple shapes and basic attributes. As you become more confident, explore more advanced features such as paths, gradients, and filters. If you make mistakes, simply edit the markup and refresh your browser to see the changes immediately. With time, you will build an intuitive understanding of how vector graphics are described and rendered.

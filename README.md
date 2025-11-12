@@ -1,6 +1,7 @@
 <!---
 {
   "id": "ec2d7d19-c8cc-423a-874c-eeacf71d7ab6",
+  "teaches": "Introduction to SVG Pictures and Markup Editing",
   "depends_on": ["2c7334b3-b07d-48d6-a562-79072d8e166e"],
   "author": "Stephan Bökelmann",
   "first_used": "2025-06-04",

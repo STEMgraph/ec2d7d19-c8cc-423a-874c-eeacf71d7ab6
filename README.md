@@ -2,7 +2,7 @@
 {
   "id": "ec2d7d19-c8cc-423a-874c-eeacf71d7ab6",
   "teaches": "Introduction to SVG Pictures and Markup Editing",
-  "depends_on": ["2c7334b3-b07d-48d6-a562-79072d8e166e"],
+  "depends_on": ["2c7334b3-b07d-48d6-a562-79072d8e166e", "facd8210-6a85-4e35-9a6e-fa623319b568"],
   "author": "Stephan Bökelmann",
   "first_used": "2025-06-04",
   "keywords": ["SVG", "markup", "graphics", "vector graphics"]
@@ -36,6 +36,17 @@ After completing this exercise, you will be able to:
 * [A Beginner's Guide to SVG on YouTube](https://www.youtube.com/watch?v=HZv8YHYU3xE)
 
 ## Tasks
+
+### Task 0: Install a Simple SVG Viewer
+
+To preview SVG files, install a simple SVG viewer that uses X11:
+
+```bash
+sudo apt update
+sudo apt install eog
+```
+
+You can then view SVG files with `eog filename.svg`.
 
 ### Task 1: Create Your First SVG File
 
